@@ -9,9 +9,10 @@ Seguir los siguientes pasos de ejemplo para la ejecución de una aplicación de 
 # Yarn se encarga de gestionar los recursos el cluster
 
 # Montar nuestro primer cluster con yarn con la versión 2 de HDFS o Yarn
+'''
 export HADOOP_HOME_WARN_SUPPRESS=1
 export HADOOP_ROOT_LOGGER="WARN,DRFA"
-
+'''
 
 # Vamos a lanzar una aplicación en un nodo de HDFS y Yarn, por ello si tenemos alguna ejecutandose detenerla
 stop-dfs.sh
