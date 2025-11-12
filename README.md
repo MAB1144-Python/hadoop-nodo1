@@ -1,3 +1,16 @@
+# VIDEO GUIDES
+## Video guide and context
+https://youtu.be/6mEEPnq_jng
+
+## Download nodo1
+https://drive.google.com/file/d/1Qr-CjnTa_Y077kxn_mRzuBVIbDkptM-M/view?usp=sharing
+
+## Problem solving
+https://youtu.be/Z5MV6wJPAF4
+
+## Other guides
+https://www.youtube.com/watch?v=woUzV_liwto&ab_channel=AuriboxTraining
+
 # hadoop-nodo1
 hadoop-nodo1
 Seguir los siguientes pasos de ejemplo para la ejecución de una aplicación de MapReduce en Hadoop
