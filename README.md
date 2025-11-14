@@ -88,6 +88,8 @@ hadoop fs -mkdir /WordCountTutorial/Input
 ```
 hadoop fs -put <cargar ruta del archivo> <de la siguiente manera>
 hadoop fs -put '/home/hadoop/Escritorio/WordCountTutorial/Input_data/Input_txt' /WordCountTutorial/Input
+hadoop fs -ls /WordCountTutorial/Input
+hadoop fs -ls /WordCountTutorial/Input/Input_txt
 ```
 # Cambiamos el directorio al directorio tutorial:
 ```
@@ -113,4 +115,24 @@ hadoop jar '/home/hadoop/Escritorio/WordCountTutorial/firstTutorial.jar' WordCou
 # Finalmente obtenemos las salidas
 ```
 hadoop dfs -cat /WordCountTutorial/Output/*
+```
+# Otros comandos.
+```
+hadoop fs -ls /WordCountTutorial/Input
+hadoop fs -cat /WordCountTutorial/Input/*
+
+hadoop fs -rm -r /WordCountTutorial/Input
+hadoop fs -mkdir /WordCountTutorial/Input
+
+hadoop fs -put '/home/hadoop/Escritorio/WordCountTutorial/Input_data/Annex_1_Aplication.txt' /WordCountTutorial/Input
+
+hadoop fs -rm -r /WordCountTutorial/Output
+
+hadoop jar '/home/hadoop/Escritorio/WordCountTutorial/firstTutorial.jar' \
+  WordCount \
+  /WordCountTutorial/Input/Annex_1_Aplication.txt \
+  /WordCountTutorial/Output
+
+hadoop fs -cat /WordCountTutorial/Output/*
+
 ```
