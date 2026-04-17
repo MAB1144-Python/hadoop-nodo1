@@ -3,7 +3,7 @@
 https://youtu.be/6mEEPnq_jng
 
 ## Download nodo1
-https://drive.google.com/file/d/1Qr-CjnTa_Y077kxn_mRzuBVIbDkptM-M/view?usp=sharing
+https://drive.google.com/drive/folders/1TNJAykiBk83nlxib0DK9VvkRPyAtGDMA?usp=drive_link
 
 ## Problem solving
 https://youtu.be/Z5MV6wJPAF4
