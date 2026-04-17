@@ -136,3 +136,63 @@ hadoop jar '/home/hadoop/Escritorio/WordCountTutorial/firstTutorial.jar' \
 hadoop fs -cat /WordCountTutorial/Output/*
 
 ```
+
+🖥️ Transferencia de Archivos entre VM (Linux) y PC (Windows) usando SCP
+
+📌 Objetivo
+
+Exportar archivos desde una máquina virtual Linux (VirtualBox) hacia el
+PC anfitrión usando scp a través de red por IP.
+
+⚙️ 1. Configuración de Red en VirtualBox
+
+1.  Apagar la máquina virtual
+2.  Ir a Configuración → Red
+3.  Configurar:
+    -   Adaptador 1: Activado
+    -   Tipo: Adaptador puente (Bridge)
+    -   Seleccionar la tarjeta de red real (WiFi o Ethernet)
+    -   Modo promiscuo: Permitir todo
+
+🌐 2. Obtener la IP de la Máquina Virtual
+
+hostname -I ip a
+
+Buscar una IP tipo: 192.168.x.x
+
+🔄 3. Forzar asignación de IP
+
+sudo dhclient -v enp0s3
+
+📡 4. Verificar conectividad
+
+ping 192.168.x.x
+
+🔐 5. Instalar y activar SSH
+
+sudo apt update sudo apt install openssh-server -y sudo systemctl start
+ssh sudo systemctl enable ssh
+
+📂 6. Transferir archivo con SCP
+
+scp usuario@IP_VM:/ruta/archivo “C:”
+
+Ejemplo: scp
+hadoop@192.168.18.213:/home/hadoop/Escritorio/WordCountTutorial/WordCount.java
+“C:G15”
+
+⚠️ Problemas comunes
+
+-   Connection timed out → SSH o red
+-   Host inaccesible → Bridge mal configurado
+-   No such file → ruta incorrecta
+
+🧪 Prueba
+
+touch prueba.txt scp hadoop@192.168.18.213:/home/hadoop/prueba.txt
+“C:G15”
+
+🎯 Conclusión
+
+Requisitos: - Red Bridge - IP válida - SSH activo - Rutas correctas con
+comillas
