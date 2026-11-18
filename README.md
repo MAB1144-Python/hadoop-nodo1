@@ -156,43 +156,15 @@ PC anfitrión usando scp a través de red por IP.
 
 🌐 2. Obtener la IP de la Máquina Virtual
 
-hostname -I ip a
+hostname -I
 
-Buscar una IP tipo: 192.168.x.x
+obtendras la IP tipo: 192.168.x.x
 
-🔄 3. Forzar asignación de IP
-
-sudo dhclient -v enp0s3
-
-📡 4. Verificar conectividad
+📡 4. Verificar conectividad desde tu pc en un terminal de windows, si la maquina virtual esta trabajando y conectada recibiremos el paquete de respuesta ok 
 
 ping 192.168.x.x
 
-🔐 5. Instalar y activar SSH
-
-sudo apt update sudo apt install openssh-server -y sudo systemctl start
-ssh sudo systemctl enable ssh
-
 📂 6. Transferir archivo con SCP
 
-scp usuario@IP_VM:/ruta/archivo “C:”
+scp hadoop@192.168.x.x:/home/hadoop/Escritorio/WordCountTutorial/WordCount.java "C:\Users\...\Downloads"
 
-Ejemplo: scp
-hadoop@192.168.18.213:/home/hadoop/Escritorio/WordCountTutorial/WordCount.java
-“C:G15”
-
-⚠️ Problemas comunes
-
--   Connection timed out → SSH o red
--   Host inaccesible → Bridge mal configurado
--   No such file → ruta incorrecta
-
-🧪 Prueba
-
-touch prueba.txt scp hadoop@192.168.18.213:/home/hadoop/prueba.txt
-“C:G15”
-
-🎯 Conclusión
-
-Requisitos: - Red Bridge - IP válida - SSH activo - Rutas correctas con
-comillas
