@@ -116,6 +116,10 @@ hadoop jar '/home/hadoop/Escritorio/WordCountTutorial/firstTutorial.jar' WordCou
 ```
 hadoop dfs -cat /WordCountTutorial/Output/*
 ```
+# llevamos la carpeta de la salida
+```
+hdfs dfs -get /WordCountTutorial/Output /home/hadoop/Escritorio/WordCountTutorial/Output
+```
 # Otros comandos.
 ```
 hadoop fs -ls /WordCountTutorial/Input
